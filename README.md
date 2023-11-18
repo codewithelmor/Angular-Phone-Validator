@@ -1,6 +1,6 @@
 # AngularPhoneValidator
 
-![2023-11-18 14-40-38](https://github.com/codewithelmor/Angular-Phone-Validator/assets/44918452/93faa11a-bef9-4f3e-b171-ad5fb08bd0b9)
+![2023-11-18 14-40-38](https://github.com/codewithelmor/Angular-Phone-Validator/assets/44918452/8235686b-40b4-4d5b-97f1-03d70332b876)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
 
