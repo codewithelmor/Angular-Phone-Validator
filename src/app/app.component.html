@@ -1,0 +1,32 @@
+<div class="container pt-5">
+    <div class="row">
+        <form class="row g-3 needs-validation" [formGroup]="form" novalidate>
+            <div class="col-md-3">
+                <div class="form-floating">
+                    <select formControlName="country" class="form-select" id="country" aria-label="Country" 
+                        (change)="onSelectCountry($event)"
+                        [ngClass]="{'is-invalid': form.get('country')?.invalid && (form.get('country')?.dirty || form.get('country')?.touched), 'is-valid': form.get('country')?.valid && (form.get('country')?.dirty || form.get('country')?.touched)}">
+                        <option selected value="">Choose...</option>
+                        <option *ngFor="let country of countries" [value]="country.value">{{country.text}}</option>
+                    </select>
+                    <label for="country">Country</label>
+                    <div class="valid-feedback" *ngIf="form.get('country')?.valid && (form.get('country')?.dirty || form.get('country')?.touched)">Valid Input</div>
+                    <div class="invalid-feedback" *ngIf="form.get('country')?.getError('required') && (form.get('country')?.dirty || form.get('country')?.touched)">The field 'country' is required.</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-floating">
+                    <input formControlName="phone" type="text" class="form-control" id="phone" aria-label="Phone" [ngClass]="{'is-invalid': form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched), 'is-valid': form.get('phone')?.valid && (form.get('phone')?.dirty || form.get('phone')?.touched)}">
+                    <label for="phone">Phone</label>
+                    <div class="valid-feedback" *ngIf="form.get('phone')?.valid && (form.get('phone')?.dirty || form.get('phone')?.touched)">Valid Input</div>
+                    <div class="invalid-feedback" *ngIf="form.get('phone')?.getError('maxlength')">The field 'phone' has length of {{form.get('phone')?.getError('maxlength')['actualLength']}} which exceeds the maximum length of {{form.get('phone')?.getError('maxlength')['requiredLength']}}.</div>
+                    <div class="invalid-feedback" *ngIf="form.get('phone')?.getError('invalidFormat') && (form.get('phone')?.dirty || form.get('phone')?.touched)">The field 'phone' has invalid format.</div>
+                    <div class="invalid-feedback" *ngIf="form.get('phone')?.getError('required') && (form.get('phone')?.dirty || form.get('phone')?.touched)">The field 'phone' is required.</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
