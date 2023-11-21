@@ -1,6 +1,6 @@
 # Validator
 
-In Angular, validators are used to perform client-side validation in reactive forms. Validators are functions that take a form control as an input and return a validation result object. These validators can be applied to form controls to enforce certain rules or constraints on the input data.
+In Angular, **`validators`** are used to perform client-side validation in reactive forms. Validators are functions that take a form control as an input and return a validation result object. These validators can be applied to form controls to enforce certain rules or constraints on the input data.
 
 Angular provides a set of built-in validators that you can use, and you can also create custom validators to suit your specific needs.
 
